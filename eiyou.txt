@@ -1,0 +1,43 @@
+ create table eiyou
+(shoku_id         char(4)      not null,
+ hin_mei          varchar(30)  not null,
+ yomi_gana        varchar(30)  not null,
+ calories         real         ,
+ protein          real         ,
+ fat              real         ,
+ carbohydrate     real         , -- 炭水化物
+ salt             real         ,
+ primary key(shoku_id));
+ 
+  ----------------------------------
+ --テーブルの削除
+ 
+ drop table eiyou;
+ 
+ ---------------------------------
+ 
+begin transaction;
+ --                                                            
+insert into eiyou values ('0001','シーザーサラダ','シーザーサラダ','278','20.4','23.4','16.5','5.8');
+insert into eiyou values ('0002','チーズケーキ',  'チーズケーキ','98','20.6','213.4','22.7','1.5');
+insert into eiyou values ('0003','手羽先','テバサキ','110','10.8','20.4','23.4','16.5');
+insert into eiyou values ('0004','ドーナツ','ドーナツ','110','21.7','45.8','5.7','28.7');
+insert into eiyou values ('0005','枝豆','エダマメ','10','1.0','10','22.9','37.8');
+insert into eiyou values ('0006','フライドポテト','フライドポテト','110','27.9','20.8','16','26.5');
+insert into eiyou values ('0007','チャーハン','チャーハン','175','29.8','40.6','16.5','9.5');
+insert into eiyou values ('0008','焼き鮭','ヤキシャケ','110','18','3.6','22.9','37.8');
+insert into eiyou values ('0009','餃子','ギョウザ','210','120.4','13.4','126','9.6');
+insert into eiyou values ('0010','ハンバーガー','ハンバーガー','378','120.5','50.4','44.5','35.8');
+insert into eiyou values ('0011','みそ汁','ミソシル','31','1.63','0.36','5.02','0.89');
+insert into eiyou values ('0012','オムレツ','オムレツ','353','23.08','22.44','11.16','2.35');
+insert into eiyou values ('0013','ピザ','ピザ','399','20.4','23.4','16.5','25.8');
+insert into eiyou values ('0014','ラーメン','ラーメン','470','21.06','8.64','73.14','2.35');
+insert into eiyou values ('0015','刺身','サシミ','175','36.96','1.96','0.14','0.14');
+insert into eiyou values ('0016','寿司','スシ','60','5.82','0.45','7.43','0.35');
+insert into eiyou values ('0017','たこ焼き','タコヤキ','516','61','23','14.9','4.9');
+
+commit;
+ 
+ 
+ delete from eiyou;
+ 

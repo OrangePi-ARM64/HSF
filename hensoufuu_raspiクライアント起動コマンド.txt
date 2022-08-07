@@ -1,0 +1,3 @@
+$ python hensoufuu_raspi.py -w frozen_inference_graph.pb -p config.pbtxt -t 51
+
+厚労省の見解により、醤油、味噌、大豆油などに関しては製造工程でアレルゲンが変質されるため、アレルゲン表示は基本的にされません。

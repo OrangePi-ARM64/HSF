@@ -1,0 +1,49 @@
+１--テーブルの登録
+
+ create table shokuhin
+(shoku_id         char(4)      not null,
+ hin_mei          varchar(30)  not null,
+ yomi_gana        varchar(30)  not null,
+ syoku_zai        varchar(300)  ,
+ syu3_hin         integer      ,
+ ta4_hin          varchar(30)  ,
+ ta21_hin         varchar(30)  ,
+ sei_url          varchar(500) ,
+ primary key(shoku_id));
+ 
+ ----------------------------------
+ --テーブルの削除
+ 
+ drop table shokuhin;
+ 
+2---------------------------------
+
+--データ登録
+begin transaction;
+--                            s_id     hin             yomi              syoku_zai                                         syu3   ta4    ta21   url                      
+insert into shokuhin values ('0001','シーザーサラダ','シーザーサラダ','レタス,ミニトマト,ベーコン,アボカド,鶏肉,チーズ',    7,    '',  '鶏肉',  'https://sites.google.com/view/hsf-sarada/');
+insert into shokuhin values ('0002','チーズケーキ',  'チーズケーキ'  ,'クリームチーズ,砂糖,卵,生クリーム,牛乳,薄力粉',      7,    '',  '',  'https://sites.google.com/view/hsf-cake/');
+insert into shokuhin values ('0003','手羽先','テバサキ','手羽先、醤油、酒、ニンニク、生姜、片栗粉、サラダ油',               1,    '',  '鶏肉',  'https://sites.google.com/view/hsf-tori/');
+insert into shokuhin values ('0004','ドーナツ','ドーナツ','強力粉、バター、砂糖、塩、卵、牛乳',                             7,    '',  '',  'https://sites.google.com/view/hsf-nattu/');
+insert into shokuhin values ('0005','枝豆','エダマメ','枝豆、みりん、生姜',                                                 0,    '',  '大豆',  'https://sites.google.com/view/hsf-mame/');
+insert into shokuhin values ('0006','フライドポテト','フライドポテト','ジャガイモ、塩、油、バター、ケチャップ',             4,    '',  '',  'https://sites.google.com/view/hsf-poteto/');
+insert into shokuhin values ('0007','チャーハン','チャーハン','長ネギ、ニンニク、生姜、油、卵、豚肉、醤油',                 2,    '',  '豚肉',  'https://sites.google.com/view/hsf-char/');
+insert into shokuhin values ('0008','焼き鮭','ヤキシャケ','塩じゃけ、酒、サラダ油',                                         0,    '',  'さけ',  'https://sites.google.com/view/hsf-sake/');
+insert into shokuhin values ('0009','餃子','ギョウザ','キャベツ、にら、片栗粉、ごま油',                                     1,    '',  '',  'https://sites.google.com/view/hsf-gyou/');
+insert into shokuhin values ('0010','ハンバーガー','ハンバーガー','ハンバーグ、レタス、玉ねぎ、トマト',                     7,    '',  '牛肉', 'https://sites.google.com/view/hsf-bager/');
+insert into shokuhin values ('0011','みそ汁','ミソシル','豆腐、わかめ、ネギ、ほんだし、味噌',                               0,    '',  '大豆',  'https://sites.google.com/view/hsf-misosoup/');
+insert into shokuhin values ('0012','オムレツ','オムレツ','牛乳、コンソメ、コショウ、トマトケチャップ、ブロッコリー、ニンジン',6, '',  '',  'https://sites.google.com/view/hsf-omelette/');
+insert into shokuhin values ('0013','ピザ','ピザ','チーズ、トマト、サラミ、バジル、アンチョビ、薄力粉、卵、コショウ、酢',   7,    '',  '牛肉・豚肉',  'https://sites.google.com/view/hsf-piza/');
+insert into shokuhin values ('0014','ラーメン','ラーメン','生めん、もやし、ネギ、焼き豚、メンマ、醤油',                     3,    '',  'ごま・鶏肉・豚肉',   'https://sites.google.com/view/hsf-ramen/');
+insert into shokuhin values ('0015','お刺身','オサシミ','マグロ、青じそ、オクラ、ワサビ、醤油',                             0,    '',  'あわび・いか・さけ・さば',  'https://sites.google.com/view/hsf-sashimia/');
+insert into shokuhin values ('0016','お寿司','オスシ','マグロ、イカ、エビ、いくら、貝、さば、たこ、アナゴ、アジ',           2,    'えび・かに',  'いか・いくら・さけ・さば',   'https://sites.google.com/view/hsf-sushi/');
+insert into shokuhin values ('0017','たこ焼き','タコヤキ','たこ、ねぎ、揚げ玉、生姜、卵、薄力粉、カツオ、海苔',             3,    '',  '',  'https://sites.google.com/view/hsf-takoyaki');
+ 
+commit;
+
+--データの削除（テーブルは残る）
+
+delete from shokuhin;
+
+
+
